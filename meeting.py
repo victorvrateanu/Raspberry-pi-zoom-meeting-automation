@@ -12,7 +12,7 @@ zoom_url = f"https://zoom.us/wc/{meeting_id}/join?pwd={password}"
 chrome_path = "/usr/bin/chromium-browser" # Replace with the actual path to Chromium on your system
 webbrowser.register('chrome', None, webbrowser.BackgroundBrowser(chrome_path))
 webbrowser.get('chrome').open_new(zoom_url)
-
+time.sleep(360)
 # Continuously check the current time and exit Zoom if it is 4:00 AM
 while True:
     now = datetime.datetime.now()
